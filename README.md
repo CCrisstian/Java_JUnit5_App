@@ -29,8 +29,8 @@
 
 <h1 align="center">@Test</h1>
 <p>En Java, cuando un método tiene la anotación <b>@Test</b>, esto indica que el método es una prueba unitaria y que será ejecutado por un framework de pruebas unitarias como JUnit o TestNG.</p>
-<p>La anotación <b>@Test</b> se utiliza para marcar un método como una prueba, lo que significa que este método contiene el código que verifica el comportamiento de una unidad específica de código bajo ciertas condiciones.</p>
 
+La anotación `@Test` se utiliza para marcar un método como una prueba, lo que significa que este método contiene el código que verifica el comportamiento de una unidad específica de código bajo ciertas condiciones
 ```java
 import org.junit.Test;
 
