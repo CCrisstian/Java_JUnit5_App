@@ -26,3 +26,56 @@
 -  <b>Construcción del proyecto</b>: Maven puede compilar el código fuente, ejecutar pruebas, empaquetar el proyecto en diferentes formatos (como JAR, WAR o EAR), y generar documentación automáticamente.
 -  <b>Ciclo de vida del proyecto</b>: Maven define un conjunto de fases y metas que constituyen el ciclo de vida del proyecto, desde la compilación hasta la instalación y despliegue. Esto permite ejecutar fácilmente tareas comunes de construcción del proyecto con un simple comando.
 -  <b>Gestión de plugins</b>: Maven admite plugins que pueden extender su funcionalidad para realizar tareas específicas en el proceso de construcción del proyecto, como generar informes, ejecutar pruebas de integración, o desplegar artefactos en servidores remotos.
+
+<h1 align="center">@Test</h1>
+<p>En Java, cuando un método tiene la anotación <b>@Test</b>, esto indica que el método es una prueba unitaria y que será ejecutado por un framework de pruebas unitarias como JUnit o TestNG.</p>
+<p>La anotación <b>@Test</b> se utiliza para marcar un método como una prueba, lo que significa que este método contiene el código que verifica el comportamiento de una unidad específica de código bajo ciertas condiciones.</p>
+
+```java
+import org.junit.Test;
+
+public class MiClaseTest {
+
+    @Test
+    public void testMetodo() {
+        // Código de prueba aquí
+    }
+}
+```
+<p>Durante la ejecución de la suite de pruebas, el framework invocará todos los métodos marcados con @Test y verificará si el comportamiento observado coincide con el comportamiento esperado definido dentro de esos métodos.</p>
+
+<h1 align="center">assertions</h1>
+<p>En Java, los "assertions" (afirmaciones o aserciones) son declaraciones que verifican que una condición especificada es verdadera durante la ejecución del programa. Estas afirmaciones se utilizan para expresar suposiciones sobre el estado del programa en un punto dado y ayudan a identificar errores lógicos o condiciones inesperadas durante el desarrollo y la depuración del código.</p>
+
+Los assertions se implementan utilizando la palabra clave `assert`.
+```java
+assert condition;
+```
+Donde `condition` es una expresión booleana que se espera que sea verdadera. Si la condición es verdadera, el programa continúa su ejecución normalmente. Sin embargo, si la condición es falsa, se lanza una excepción `AssertionError`, lo que indica que la aserción ha fallado. Por lo general, esto detiene la ejecución del programa, a menos que las aserciones estén desactivadas.
+
+<p>Framework de pruebas unitarias JUnit:</p>
+
+-  `assertTrue(boolean condition)`: Verifica que la condición dada sea verdadera.
+```java
+assertTrue(x > 0);
+```
+-  `assertTrue(boolean condition)`: Verifica que la condición dada sea falsa.
+```java
+assertFalse(x < 0);
+```
+-  `assertEquals(expected, actual)`: Verifica que los valores esperados y reales sean iguales.
+```java
+assertEquals(5, result);
+```
+-  `assertNotEquals(unexpected, actual)`: Verifica que los valores esperados y reales no sean iguales.
+```java
+assertNotEquals(null, object);
+```
+-  `assertNotNull(object)`: Verifica que el objeto dado no sea nulo.
+```java
+assertNotNull(object);
+```
+-  `assertNull(object)`: Verifica que el objeto dado sea nulo.
+```java
+assertNull(object);
+```
