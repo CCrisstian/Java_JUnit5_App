@@ -73,6 +73,9 @@ try {
     System.out.println("Error de división: " + e.getMessage());
 }
 ```
+<h2>Inmutabilidad  de 'BigDecimal'</h2>
+<p>una vez que se crea un objeto BigDecimal, su valor no puede cambiarse. Cualquier operación aritmética u otra manipulación de un objeto BigDecimal produce un nuevo objeto BigDecimal con el resultado de la operación, en lugar de modificar el objeto original.</p>
+<p>Esta inmutabilidad es una característica importante de BigDecimal, ya que garantiza que los valores numéricos se mantengan consistentes y que las operaciones no alteren los objetos originales. Esto es particularmente útil en aplicaciones donde la precisión y la integridad de los datos son críticas, como en aplicaciones financieras o científicas.</p>
 
 <h1 align="center">assertions</h1>
 <p>En Java, los "assertions" (afirmaciones o aserciones) son declaraciones que verifican que una condición especificada es verdadera durante la ejecución del programa. Estas afirmaciones se utilizan para expresar suposiciones sobre el estado del programa en un punto dado y ayudan a identificar errores lógicos o condiciones inesperadas durante el desarrollo y la depuración del código.</p>
