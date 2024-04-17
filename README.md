@@ -44,6 +44,36 @@ public class MiClaseTest {
 ```
 Durante la ejecución de la suite de pruebas, el framework invocará todos los métodos marcados con `@Test` y verificará si el comportamiento observado coincide con el comportamiento esperado definido dentro de esos métodos.
 
+<h1 align="center">Api 'BigDecimal'</h1>
+<p><b>BigDecimal</b> es una clase en Java que proporciona soporte para aritmética de precisión arbitraria. Esta clase se utiliza para trabajar con números decimales de precisión arbitraria, lo que significa que puede manejar números con una cantidad arbitraria de dígitos, lo que evita problemas de precisión que pueden surgir al trabajar con números de punto flotante.</p>
+
+Algunas de las características y métodos importantes de la clase `BigDecimal`:
+-  <b>Precisión arbitraria</b>: `BigDecimal` puede representar números decimales con una precisión arbitraria, lo que permite trabajar con números con una gran cantidad de dígitos.
+-  <b>Constructor</b>: Puedes crear un objeto `BigDecimal` utilizando varios constructores, como pasar un valor numérico como cadena de caracteres, un valor de punto flotante o un valor entero.
+```java
+BigDecimal bigDecimal = new BigDecimal("123.456");
+```
+-  <b>ConstructorOperaciones aritméticas</b>: `BigDecimal` proporciona métodos para realizar operaciones aritméticas como suma, resta, multiplicación y división con precisión arbitraria. Estas operaciones se realizan a través de métodos como `add()`, `subtract()`, `multiply()` y `divide()`.
+```java
+BigDecimal resultado = bigDecimal1.add(bigDecimal2);
+```
+-  <b>Comparación</b>: `BigDecimal` también proporciona métodos para comparar valores, como `compareTo()`, `equals()` y `compareTo()`, que permiten comparar dos objetos `BigDecimal`.
+```java
+int comparacion = bigDecimal1.compareTo(bigDecimal2);
+```
+-  <b>Redondeo</b>: La clase `BigDecimal` también ofrece métodos para redondear valores según ciertos criterios, como `setScale()` y `round()`.
+```java
+BigDecimal redondeado = bigDecimal.setScale(2, RoundingMode.HALF_UP);
+```
+-  <b>Manejo de excepciones</b>: `BigDecimal` lanza una excepción `ArithmeticException` si ocurre un error aritmético durante las operaciones, como la división por cero.
+```java
+try {
+    BigDecimal resultado = bigDecimal1.divide(bigDecimal2);
+} catch (ArithmeticException e) {
+    System.out.println("Error de división: " + e.getMessage());
+}
+```
+
 <h1 align="center">assertions</h1>
 <p>En Java, los "assertions" (afirmaciones o aserciones) son declaraciones que verifican que una condición especificada es verdadera durante la ejecución del programa. Estas afirmaciones se utilizan para expresar suposiciones sobre el estado del programa en un punto dado y ayudan a identificar errores lógicos o condiciones inesperadas durante el desarrollo y la depuración del código.</p>
 
