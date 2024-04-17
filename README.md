@@ -42,7 +42,7 @@ public class MiClaseTest {
     }
 }
 ```
-<p>Durante la ejecución de la suite de pruebas, el framework invocará todos los métodos marcados con @Test y verificará si el comportamiento observado coincide con el comportamiento esperado definido dentro de esos métodos.</p>
+Durante la ejecución de la suite de pruebas, el framework invocará todos los métodos marcados con `@Test` y verificará si el comportamiento observado coincide con el comportamiento esperado definido dentro de esos métodos.
 
 <h1 align="center">assertions</h1>
 <p>En Java, los "assertions" (afirmaciones o aserciones) son declaraciones que verifican que una condición especificada es verdadera durante la ejecución del programa. Estas afirmaciones se utilizan para expresar suposiciones sobre el estado del programa en un punto dado y ayudan a identificar errores lógicos o condiciones inesperadas durante el desarrollo y la depuración del código.</p>
