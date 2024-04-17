@@ -18,6 +18,16 @@
 -  <b>Arquitectura de lanzamiento</b>: JUnit 5 proporciona una arquitectura de lanzamiento que permite a los usuarios migrar de JUnit 4 a JUnit 5 de manera gradual. Esto significa que es posible ejecutar pruebas escritas con JUnit 4 junto con pruebas escritas con JUnit 5 en la misma suite de pruebas.
 -  <b>Soporte para nuevos estilos de pruebas</b>: JUnit 5 introduce nuevos estilos de pruebas, como pruebas basadas en lambdas y pruebas parametrizadas mejoradas. Esto permite una mayor flexibilidad en la escritura de pruebas y facilita la creación de casos de prueba más complejos y variados.
 
+<h2>JUnit Jupiter</h2>
+<p>JUnit Jupiter es el nombre del subproyecto que se introdujo con JUnit 5, que es la última versión importante del popular framework de pruebas unitarias para Java, JUnit. Algunas de las ventajas de utilizar JUnit Jupiter en Java:</p>
+
+-  <b>Modelo de programación moderno</b>: JUnit Jupiter ofrece un modelo de programación moderno y más flexible en comparación con JUnit 4. Introduce nuevas características como extensiones, anotaciones de parámetros, y métodos de aserción mejorados que facilitan la escritura y mantenimiento de pruebas unitarias.
+-  <b>Anotaciones mejoradas</b>: JUnit Jupiter presenta un conjunto ampliado de anotaciones que permiten una mayor personalización y flexibilidad en las pruebas. Además de `@Test`, incluye anotaciones como `@BeforeEach`, `@AfterEach`, `@BeforeAll`, y `@AfterAll`, que permiten configurar el estado antes y después de las pruebas de manera más precisa.
+-  <b>Extensiones</b>: JUnit Jupiter introduce el concepto de extensiones, que permiten extender y personalizar el comportamiento del framework de pruebas. Esto facilita la integración con otros frameworks y bibliotecas, así como la creación de funcionalidades adicionales para las pruebas unitarias.
+-  <b>Arquitectura más modular</b>: JUnit Jupiter está diseñado con una arquitectura más modular que permite a los usuarios elegir y utilizar solo las partes específicas que necesitan. Esto proporciona una mayor flexibilidad y facilita la integración con otros frameworks y herramientas de desarrollo.
+-  <b>Soporte para nuevos estilos de pruebas</b>: JUnit Jupiter introduce nuevos estilos de pruebas, como pruebas parametrizadas y pruebas basadas en lambdas, que permiten escribir pruebas más expresivas y concisas.
+-  <b>Compatibilidad con Java 8 y versiones posteriores</b>: JUnit Jupiter está diseñado para ser compatible con Java 8 y versiones posteriores del lenguaje, lo que permite aprovechar las características introducidas en estas versiones, como expresiones lambda y streams.
+
 <h1 align="center">Maven</h1>
 <p>Maven es una herramienta de gestión de proyectos de código abierto desarrollada por la Apache Software Foundation. Se utiliza principalmente en proyectos Java para automatizar el proceso de construcción, gestión de dependencias y generación de informes de software. Maven utiliza un archivo XML llamado "pom.xml" (Project Object Model) para describir el proyecto y sus dependencias, así como para definir cómo se debe construir el proyecto.</p>
 <p>Algunas de las funciones principales de Maven son:</p>
