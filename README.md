@@ -131,3 +131,14 @@ assertNotNull(object);
 ```java
 assertNull(object);
 ```
+
+<h1 align="center">Api stream</h1>
+<p>El <b>API Stream</b> en Java proporciona una forma declarativa y funcional de procesar colecciones de datos de manera eficiente. Introducido en Java 8 como parte del paquete <b>java.util.stream</b>, el <b>Stream API</b> permite realizar operaciones sobre secuencias de elementos de forma parecida a como se trabaja con las colecciones, pero con la ventaja de que es posible realizar operaciones de forma paralela y diferida (lazy), lo que puede conducir a una mayor eficiencia en el uso de recursos y a un código más conciso y legible.</p>
+
+Algunas características y conceptos clave del API `Stream` en Java:
+-  <b>Flujo (Stream)</b>: Un flujo (Stream) representa una secuencia de elementos que pueden ser procesados de manera secuencial o paralela. Los flujos no almacenan datos, sino que operan sobre una fuente de datos subyacente, como una colección, matriz o un generador de elementos.
+-  <b>Operaciones intermedias</b>: Las operaciones intermedias se aplican a un flujo y devuelven otro flujo. Estas operaciones no producen un resultado final hasta que se desencadena una operación terminal. Algunas operaciones intermedias comunes incluyen `filter`, `map`, `sorted`, `distinct`, entre otras.
+-  <b>Operaciones terminales</b>: Las operaciones terminales consumen un flujo y producen un resultado final. Una vez que se realiza una operación terminal, el flujo se consume y no se puede reutilizar. Algunas operaciones terminales comunes incluyen `forEach`, `collect`, `reduce`, `count`, `min`, `max`, entre otras.
+-  <b>Operaciones de reducción</b>: Las operaciones de reducción, como `reduce`, `collect` y `sum`, permiten combinar los elementos de un flujo en un solo resultado.
+-  <b>Operaciones de procesamiento paralelo</b>: El API `Stream` permite realizar operaciones de procesamiento paralelo de forma transparente mediante el uso de hilos. Esto puede mejorar significativamente el rendimiento en hardware multinúcleo y grandes conjuntos de datos.
+-  <b>Programación funcional</b>: El API `Stream` fomenta un estilo de programación funcional, lo que significa que las operaciones se expresan como funciones que se aplican a los elementos del flujo. Esto promueve la escritura de código más conciso, legible y mantenible.
