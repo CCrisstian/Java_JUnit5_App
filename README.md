@@ -164,3 +164,24 @@ void testCalculadora() {
     );
 }
 ```
+<h1 align="center">@DisplayName y @Disabled</h1>
+<h3>@DisplayName</h3>
+<p>La anotación @DisplayName se utiliza para proporcionar un nombre personalizado a una prueba o a un conjunto de pruebas. Esto es útil para hacer que los nombres de las pruebas sean más descriptivos y legibles, lo que facilita la comprensión de lo que se está probando.</p>
+
+```java
+@Test
+@DisplayName("Prueba para verificar la suma de dos números positivos")
+void testSuma() {
+    // Código de la prueba
+}
+```
+<h3>@Disabled</h3>
+<p>La anotación @Disabled se utiliza para deshabilitar una prueba o un conjunto de pruebas. Esto significa que la prueba no se ejecutará cuando se ejecute el conjunto de pruebas, pero seguirá estando presente en el código y se podrá habilitar fácilmente en el futuro si es necesario.</p>
+
+```java
+@Test
+@Disabled("Esta prueba está deshabilitada temporalmente debido a un problema conocido")
+void testFuncionalidad() {
+    // Código de la prueba
+}
+```
