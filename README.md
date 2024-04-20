@@ -197,3 +197,42 @@ void testFuncionalidad() {
 -  Prueba (sin anotación): Estos son los métodos que contienen las pruebas reales. No se utilizan anotaciones específicas para marcar estas pruebas.
 -  `@AfterEach`: Esta anotación se utiliza para marcar un método que debe ejecutarse después de cada prueba en la clase. El método no debe ser estático y no debe tener parámetros. Se utiliza para realizar la limpieza necesaria después de cada prueba.
 -  `@AfterAll`: Esta anotación se utiliza para marcar un método que debe ejecutarse una vez después de que se hayan completado todas las pruebas en la clase. El método debe ser estático y no debe tener parámetros. Se utiliza para realizar la limpieza final después de todas las pruebas.
+
+<h1 align="center">@EnabledOnOs, @EnabledOnJre y @EnabledIfSystemProperty</h1>
+<p>Las anotaciones @EnabledOnOs, @EnabledOnJre, @EnabledIfSystemProperty y similares en JUnit 5 son anotaciones de condición que se utilizan para habilitar o deshabilitar pruebas basadas en ciertas condiciones específicas del entorno de ejecución. Esto permite ejecutar pruebas solo en entornos específicos o bajo ciertas condiciones, lo que puede ser útil para probar funcionalidades que dependen del sistema operativo, la versión de Java u otras propiedades del sistema.</p>
+
+-  `@EnabledOnOs`: Esta anotación se utiliza para habilitar una prueba solo en ciertos sistemas operativos. Se puede especificar uno o varios sistemas operativos como parámetro.
+```java
+@Test
+@EnabledOnOs({ OS.WINDOWS, OS.MAC })
+void testOnWindowsAndMac() {
+    // Esta prueba se ejecutará solo en Windows y macOS
+}
+```
+
+-  `@EnabledOnJre`: Esta anotación se utiliza para habilitar una prueba solo en ciertas versiones de la máquina virtual de Java (JVM). Se puede especificar una o varias versiones de JRE como parámetro.
+```java
+@Test
+@EnabledOnJre(JRE.JAVA_8)
+void testOnJava8() {
+    // Esta prueba se ejecutará solo en Java 8
+}
+```
+
+-  `@EnabledIfSystemProperty`: Esta anotación se utiliza para habilitar una prueba basada en el valor de una propiedad del sistema. Se puede especificar el nombre de la propiedad y su valor esperado como parámetros.
+```java
+@Test
+@EnabledIfSystemProperty(named = "environment", matches = "development")
+void testInDevelopmentEnvironment() {
+    // Esta prueba se ejecutará solo si la propiedad del sistema 'environment' tiene el valor 'development'
+}
+```
+
+-  `@EnabledIfEnvironmentVariable`: Similar a `@EnabledIfSystemProperty`, pero se basa en variables de entorno en lugar de propiedades del sistema.
+```java
+@Test
+@EnabledIfEnvironmentVariable(named = "ENVIRONMENT", matches = "dev")
+void testInDevelopmentEnvironment() {
+    // Esta prueba se ejecutará solo si la variable de entorno 'ENVIRONMENT' tiene el valor 'dev'
+}
+```
