@@ -186,7 +186,7 @@ void testFuncionalidad() {
 }
 ```
 
-<h1>Cliclo de vida</h1>
+<h1 align="center">Cliclo de vida</h1>
 <p>El ciclo de vida de una clase de prueba en Java, que utiliza JUnit 5, sigue un proceso específico que se ejecuta antes y después de cada prueba y también antes y después de todas las pruebas en la clase.</p>
 
  Aquí está el ciclo de vida típico de una clase de prueba, incluyendo las anotaciones `@BeforeAll`, `@BeforeEach`, `@AfterEach` y `@AfterAll`:
