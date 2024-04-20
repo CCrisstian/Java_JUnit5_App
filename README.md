@@ -153,7 +153,8 @@ assertAll(String mensaje, Executable... ejecutables)
 -  <b>mensaje</b>: Un mensaje opcional que se mostrará si alguna de las afirmaciones falla. Puede ser útil para proporcionar información adicional sobre la prueba que se está ejecutando.
 -  <b>ejecutables</b>: Una serie de ejecutables (métodos sin argumentos que lanzan excepciones) que contienen las afirmaciones que se desean verificar.
 
-```java@Test
+```java
+@Test
 void testCalculadora() {
     Calculadora calculadora = new Calculadora();
     assertAll("Verificación de operaciones",
