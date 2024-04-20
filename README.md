@@ -142,3 +142,24 @@ Algunas características y conceptos clave del API `Stream` en Java:
 -  <b>Operaciones de reducción</b>: Las operaciones de reducción, como `reduce`, `collect` y `sum`, permiten combinar los elementos de un flujo en un solo resultado.
 -  <b>Operaciones de procesamiento paralelo</b>: El API `Stream` permite realizar operaciones de procesamiento paralelo de forma transparente mediante el uso de hilos. Esto puede mejorar significativamente el rendimiento en hardware multinúcleo y grandes conjuntos de datos.
 -  <b>Programación funcional</b>: El API `Stream` fomenta un estilo de programación funcional, lo que significa que las operaciones se expresan como funciones que se aplican a los elementos del flujo. Esto promueve la escritura de código más conciso, legible y mantenible.
+
+<h1 align="center">assertAll</h1>
+<p>assertAll es un método proporcionado por el framework de pruebas unitarias JUnit para Java que se utiliza para ejecutar varias afirmaciones y agrupar sus resultados en un solo informe de error. Esta función es útil cuando se quiere verificar múltiples condiciones en una sola prueba y obtener información detallada sobre todas las afirmaciones que fallaron, en lugar de detenerse en la primera falla como lo haría un simple assert.</p>
+
+La sintaxis básica del método `assertAll` es la siguiente:
+```java
+assertAll(String mensaje, Executable... ejecutables)
+```
+-  <b>mensaje</b>: Un mensaje opcional que se mostrará si alguna de las afirmaciones falla. Puede ser útil para proporcionar información adicional sobre la prueba que se está ejecutando.
+-  <b>ejecutables</b>: Una serie de ejecutables (métodos sin argumentos que lanzan excepciones) que contienen las afirmaciones que se desean verificar.
+
+```java@Test
+void testCalculadora() {
+    Calculadora calculadora = new Calculadora();
+    assertAll("Verificación de operaciones",
+                () -> assertEquals(4, calculadora.sumar(2, 2)),
+                () -> assertEquals(2, calculadora.restar(4, 2)),
+                () -> assertEquals(6, calculadora.multiplicar(2, 3))
+    );
+}
+```
