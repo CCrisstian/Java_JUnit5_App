@@ -185,3 +185,15 @@ void testFuncionalidad() {
     // Código de la prueba
 }
 ```
+
+<h1>Cliclo de vida</h1>
+<p>El ciclo de vida de una clase de prueba en Java, que utiliza JUnit 5, sigue un proceso específico que se ejecuta antes y después de cada prueba y también antes y después de todas las pruebas en la clase.</p>
+
+ Aquí está el ciclo de vida típico de una clase de prueba, incluyendo las anotaciones `@BeforeAll`, `@BeforeEach`, `@AfterEach` y `@AfterAll`:
+<p align="center"><img width="438" alt="image" src="https://github.com/CCrisstian/Java_JUnit5_App/assets/111469216/913805af-ed93-4f3d-9720-684584f41d2f"></p>
+
+-  `@BeforeAll`: Esta anotación se utiliza para marcar un método que debe ejecutarse una vez antes de que se inicien todas las pruebas en la clase. El método debe ser estático y no debe tener parámetros.
+-  `@BeforeEach`: Esta anotación se utiliza para marcar un método que debe ejecutarse antes de cada prueba en la clase. El método no debe ser estático y no debe tener parámetros. Es útil para configurar el estado necesario antes de cada prueba.
+-  Prueba (sin anotación): Estos son los métodos que contienen las pruebas reales. No se utilizan anotaciones específicas para marcar estas pruebas.
+-  `@AfterEach`: Esta anotación se utiliza para marcar un método que debe ejecutarse después de cada prueba en la clase. El método no debe ser estático y no debe tener parámetros. Se utiliza para realizar la limpieza necesaria después de cada prueba.
+-  `@AfterAll`: Esta anotación se utiliza para marcar un método que debe ejecutarse una vez después de que se hayan completado todas las pruebas en la clase. El método debe ser estático y no debe tener parámetros. Se utiliza para realizar la limpieza final después de todas las pruebas.
