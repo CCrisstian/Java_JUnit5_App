@@ -236,3 +236,7 @@ void testInDevelopmentEnvironment() {
     // Esta prueba se ejecutará solo si la variable de entorno 'ENVIRONMENT' tiene el valor 'dev'
 }
 ```
+
+<h1 align="center">Assumptions</h1>
+<p>"Assumptions" (suposiciones) es un conjunto de métodos proporcionados por el framework de pruebas unitarias JUnit que se utilizan para establecer suposiciones sobre el entorno de ejecución de las pruebas. A diferencia de las aserciones (assertions), que verifican el comportamiento esperado de una prueba, las suposiciones permiten definir condiciones que deben ser verdaderas para que una prueba se ejecute.</p>
+<p>Las suposiciones son útiles cuando se tienen pruebas que dependen de ciertas condiciones del entorno, como la disponibilidad de recursos específicos o la configuración del sistema. Si una suposición falla, la prueba se marcará como "omitida" en lugar de fallar. Esto significa que no se considerará un fallo, pero tampoco se considerará una prueba exitosa.</p>
