@@ -277,3 +277,11 @@ public class MiClaseTest {
     }
 }
 ```
+
+<h1 align="center">@Nested y @RepeatedTest</h1>
+
+`@Nested`: La anotación `@Nested` se utiliza para anidar clases de prueba dentro de otras clases de prueba. Esto permite organizar y estructurar las pruebas de una manera más clara y jerárquica, lo que facilita su mantenimiento y comprensión.
+
+`@RepeatedTest`: La anotación `@RepeatedTest` se utiliza para repetir una prueba un número especificado de veces. Esto es útil para probar el comportamiento de una función bajo diferentes condiciones o para realizar pruebas de rendimiento.
+
+Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facilitar la organización, modularidad y repetición de las pruebas unitarias, lo que contribuye a un código de prueba más claro y mantenible.
