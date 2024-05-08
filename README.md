@@ -240,3 +240,40 @@ void testInDevelopmentEnvironment() {
 <h1 align="center">Assumptions</h1>
 <p>"Assumptions" (suposiciones) es un conjunto de métodos proporcionados por el framework de pruebas unitarias JUnit que se utilizan para establecer suposiciones sobre el entorno de ejecución de las pruebas. A diferencia de las aserciones (assertions), que verifican el comportamiento esperado de una prueba, las suposiciones permiten definir condiciones que deben ser verdaderas para que una prueba se ejecute.</p>
 <p>Las suposiciones son útiles cuando se tienen pruebas que dependen de ciertas condiciones del entorno, como la disponibilidad de recursos específicos o la configuración del sistema. Si una suposición falla, la prueba se marcará como "omitida" en lugar de fallar. Esto significa que no se considerará un fallo, pero tampoco se considerará una prueba exitosa.</p>
+
+<h2>"assume" y "assuming"</h2>
+
+`assume`: El método `assume` es una forma más expresiva de realizar suposiciones en JUnit 5. Permite definir una condición utilizando una expresión lambda que será evaluada como verdadera o falsa. Si la condición es falsa, la prueba se marcará como "omitida". Este método proporciona una forma más flexible de definir suposiciones en comparación con `assumeTrue()`.
+
+```java
+import static org.junit.jupiter.api.Assumptions.assume;
+import org.junit.jupiter.api.Test;
+
+public class MiClaseTest {
+    @Test
+    void test() {
+        // Suponemos que el sistema operativo es Windows
+        assume(() -> System.getProperty("os.name").startsWith("Windows"));
+        // El código de la prueba continúa aquí
+        // Solo se ejecutará si la suposición es verdadera
+    }
+}
+```
+
+`assuming`: El método `assuming` es similar a `assume`, pero proporciona una forma de realizar suposiciones condicionales basadas en otra suposición. Esto puede ser útil cuando se tienen varias suposiciones y se quiere establecer una condición adicional si una suposición anterior es verdadera.
+
+```java
+import static org.junit.jupiter.api.Assumptions.assumingThat;
+import org.junit.jupiter.api.Test;
+
+public class MiClaseTest {
+    @Test
+    void test() {
+        // Suponemos que el sistema operativo es Windows
+        assumingThat(System.getProperty("os.name").startsWith("Windows"), () -> {
+            // El código de la prueba continúa aquí
+            // Solo se ejecutará si la suposición es verdadera
+        });
+    }
+}
+```
