@@ -285,3 +285,6 @@ public class MiClaseTest {
 `@RepeatedTest`: La anotación `@RepeatedTest` se utiliza para repetir una prueba un número especificado de veces. Esto es útil para probar el comportamiento de una función bajo diferentes condiciones o para realizar pruebas de rendimiento.
 
 Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facilitar la organización, modularidad y repetición de las pruebas unitarias, lo que contribuye a un código de prueba más claro y mantenible.
+
+<h1 align="center">@ParameterizedTest</h1>
+<p>@ParameterizedTest es una anotación de JUnit 5 que se utiliza para realizar pruebas parametrizadas. Las pruebas parametrizadas permiten ejecutar una misma prueba con diferentes conjuntos de datos de entrada. Esto es útil cuando se quiere probar el comportamiento de un método con múltiples valores de entrada para asegurarse de que funcione correctamente en diferentes situaciones.</p>
