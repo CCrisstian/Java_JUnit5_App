@@ -296,3 +296,8 @@ Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facil
 `@CsvSource`: Esta anotación se utiliza para proporcionar una lista de valores en formato CSV como parámetros para la prueba. Cada línea en el CSV representa un conjunto de parámetros para una ejecución de prueba.
 
 `@CsvFileSource`: Esta anotación se utiliza para cargar los datos de un archivo CSV como parámetros para la prueba. El archivo CSV debe estar presente en el classpath del proyecto.
+
+<h1 align="center">@Tag</h1>
+<p>La anotación @Tag en JUnit 5 se utiliza para etiquetar las pruebas con una o más etiquetas (tags) descriptivas. Estas etiquetas permiten categorizar las pruebas de acuerdo a diferentes criterios, como el tipo de prueba, la funcionalidad que están probando, la prioridad, o cualquier otro criterio relevante para la organización y ejecución de las pruebas.</p>
+<p>La anotación @Tag se puede aplicar a nivel de clase o de método de prueba. Cuando se aplica a nivel de clase, todas las pruebas dentro de esa clase estarán etiquetadas con la(s) etiqueta(s) especificada(s). Cuando se aplica a nivel de método de prueba, solo ese método de prueba en particular estará etiquetado.</p>
+<p>Las etiquetas definidas con @Tag se pueden usar luego en la configuración de la ejecución de pruebas para incluir o excluir pruebas específicas según sus etiquetas, lo que permite una mayor flexibilidad en la ejecución y organización de las pruebas.</p>
