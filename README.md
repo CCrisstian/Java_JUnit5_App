@@ -296,3 +296,41 @@ Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facil
 `@CsvSource`: Esta anotación se utiliza para proporcionar una lista de valores en formato CSV como parámetros para la prueba. Cada línea en el CSV representa un conjunto de parámetros para una ejecución de prueba.
 
 `@CsvFileSource`: Esta anotación se utiliza para cargar los datos de un archivo CSV como parámetros para la prueba. El archivo CSV debe estar presente en el classpath del proyecto.
+
+<h1 align="center">@Tag</h1>
+<p>La anotación @Tag en JUnit 5 se utiliza para etiquetar las pruebas con una o más etiquetas (tags) descriptivas. Estas etiquetas permiten categorizar las pruebas de acuerdo a diferentes criterios, como el tipo de prueba, la funcionalidad que están probando, la prioridad, o cualquier otro criterio relevante para la organización y ejecución de las pruebas.</p>
+<p>La anotación @Tag se puede aplicar a nivel de clase o de método de prueba. Cuando se aplica a nivel de clase, todas las pruebas dentro de esa clase estarán etiquetadas con la(s) etiqueta(s) especificada(s). Cuando se aplica a nivel de método de prueba, solo ese método de prueba en particular estará etiquetado.</p>
+<p>Las etiquetas definidas con @Tag se pueden usar luego en la configuración de la ejecución de pruebas para incluir o excluir pruebas específicas según sus etiquetas, lo que permite una mayor flexibilidad en la ejecución y organización de las pruebas.</p>
+
+<h1 align="center">'TestInfo' y 'TestReporter'</h1>
+<p>"TestInfo" y "TestReporter" son interfaces proporcionadas por JUnit 5 para obtener información sobre las pruebas que se están ejecutando y para reportar información adicional durante la ejecución de las pruebas.</p>
+
+`TestInfo`:
+-  `String getDisplayName()`: Devuelve el nombre descriptivo de la prueba.
+-  `Set<Tag> getTags()`: Devuelve las etiquetas asociadas a la prueba, si se han especificado usando `@Tag`.
+-  `Optional<Class<?>> getTestClass()`: Devuelve la clase de prueba asociada a la prueba.
+-  `Optional<Method> getTestMethod()`: Devuelve el método de prueba asociado a la prueba.
+-  `Map<String, String> getTestAttributes()`: Devuelve los atributos adicionales asociados a la prueba.
+  
+`TestReporter`:
+-  `void publishEntry(String key, String value)`: Publica una entrada en el reporte de la prueba con la clave y el valor especificados.
+-  `void publishEntry(Map<String, String> entries)`: Publica varias entradas en el reporte de la prueba con los pares de clave-valor especificados en el mapa.
+-  `void publishEntry(ReportEntry entry)`: Publica una entrada de reporte personalizada.
+-  `void publishEntry(String message)`: Publica un mensaje en el reporte de la prueba.
+
+<p>Estas interfaces son útiles para proporcionar información adicional o personalizada sobre las pruebas durante su ejecución, lo que puede ser útil para fines de registro, seguimiento o diagnóstico de problemas.</p>
+
+<h1 align="center">@Timeout</h1>
+<p>La anotación @Timeout en JUnit 5 se utiliza para especificar un límite de tiempo máximo para la ejecución de una prueba. Esto es útil cuando se quiere asegurar que una prueba no tome más tiempo del esperado para ejecutarse, lo que puede indicar problemas de rendimiento o bloqueos en el código.</p>
+<p>La anotación @Timeout se puede aplicar a nivel de clase o de método de prueba. Cuando se aplica a nivel de clase, el límite de tiempo se aplica a todas las pruebas en la clase. Cuando se aplica a nivel de método de prueba, el límite de tiempo se aplica solo a ese método de prueba en particular.</p>
+<p>El tiempo de espera se especifica utilizando un valor numérico entero junto con una unidad de tiempo, como segundos, minutos, milisegundos, etc.</p>
+<p>Es importante tener en cuenta que el tiempo especificado en @Timeout se aplica al tiempo total de ejecución de la prueba, incluyendo cualquier espera, bloqueo o tiempo de procesamiento en el código de la prueba. Esto permite asegurar que la prueba no se quede bloqueada o se ejecute indefinidamente, lo que podría afectar la eficiencia y confiabilidad de las pruebas.</p>
+
+<h1 align="center">Maven: Surefire </h1>
+<p>El plugin Surefire es una herramienta que se utiliza en el ecosistema de Maven para la ejecución de pruebas unitarias en proyectos Java. Es un plugin muy popular y ampliamente utilizado en el desarrollo de software Java. Surefire es especialmente útil en proyectos Maven, ya que permite ejecutar pruebas automáticamente durante el proceso de compilación o cuando se realiza un ciclo de vida específico.</p>
+<p>Algunas características clave y cómo se usa el plugin Surefire en Maven:</p>
+
+-  <b>Ejecución de pruebas automáticas</b>: El plugin Surefire permite ejecutar pruebas unitarias automáticamente durante el proceso de compilación de Maven. Cuando se ejecuta el comando `mvn test`, Surefire buscará y ejecutará todas las clases de prueba en el proyecto.
+-  <b>Formatos de reporte</b>: Surefire genera informes de ejecución de pruebas en varios formatos, incluyendo formatos de texto, XML y HTML. Estos informes proporcionan detalles sobre las pruebas que se ejecutaron, los resultados y cualquier error o fallo encontrado durante la ejecución.
+-  <b>Configuración flexible</b>: Surefire se puede configurar fácilmente en el archivo `pom.xml` del proyecto Maven para personalizar su comportamiento. Esto incluye especificar la ubicación de las clases de prueba, los directorios de salida para los informes de prueba, los patrones de inclusión y exclusión para las pruebas, entre otros ajustes.
+-  <b>Integración con CI/CD</b>: Surefire es compatible con plataformas de integración continua (CI) como Jenkins, Travis CI y CircleCI, lo que permite ejecutar automáticamente las pruebas en cada confirmación de código o en un horario programado. Los informes de prueba generados por Surefire se pueden integrar con estas plataformas para proporcionar retroalimentación rápida sobre la calidad del código.
