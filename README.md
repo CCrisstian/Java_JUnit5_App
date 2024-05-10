@@ -319,3 +319,9 @@ Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facil
 -  `void publishEntry(String message)`: Publica un mensaje en el reporte de la prueba.
 
 <p>Estas interfaces son útiles para proporcionar información adicional o personalizada sobre las pruebas durante su ejecución, lo que puede ser útil para fines de registro, seguimiento o diagnóstico de problemas.</p>
+
+<h1 align="center">@Timeout</h1>
+<p>La anotación @Timeout en JUnit 5 se utiliza para especificar un límite de tiempo máximo para la ejecución de una prueba. Esto es útil cuando se quiere asegurar que una prueba no tome más tiempo del esperado para ejecutarse, lo que puede indicar problemas de rendimiento o bloqueos en el código.</p>
+<p>La anotación @Timeout se puede aplicar a nivel de clase o de método de prueba. Cuando se aplica a nivel de clase, el límite de tiempo se aplica a todas las pruebas en la clase. Cuando se aplica a nivel de método de prueba, el límite de tiempo se aplica solo a ese método de prueba en particular.</p>
+<p>El tiempo de espera se especifica utilizando un valor numérico entero junto con una unidad de tiempo, como segundos, minutos, milisegundos, etc.</p>
+<p>Es importante tener en cuenta que el tiempo especificado en @Timeout se aplica al tiempo total de ejecución de la prueba, incluyendo cualquier espera, bloqueo o tiempo de procesamiento en el código de la prueba. Esto permite asegurar que la prueba no se quede bloqueada o se ejecute indefinidamente, lo que podría afectar la eficiencia y confiabilidad de las pruebas.</p>
