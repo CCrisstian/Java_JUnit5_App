@@ -301,3 +301,21 @@ Estas anotaciones proporcionan funcionalidades adicionales en JUnit 5 para facil
 <p>La anotación @Tag en JUnit 5 se utiliza para etiquetar las pruebas con una o más etiquetas (tags) descriptivas. Estas etiquetas permiten categorizar las pruebas de acuerdo a diferentes criterios, como el tipo de prueba, la funcionalidad que están probando, la prioridad, o cualquier otro criterio relevante para la organización y ejecución de las pruebas.</p>
 <p>La anotación @Tag se puede aplicar a nivel de clase o de método de prueba. Cuando se aplica a nivel de clase, todas las pruebas dentro de esa clase estarán etiquetadas con la(s) etiqueta(s) especificada(s). Cuando se aplica a nivel de método de prueba, solo ese método de prueba en particular estará etiquetado.</p>
 <p>Las etiquetas definidas con @Tag se pueden usar luego en la configuración de la ejecución de pruebas para incluir o excluir pruebas específicas según sus etiquetas, lo que permite una mayor flexibilidad en la ejecución y organización de las pruebas.</p>
+
+<h1 align="center">'TestInfo' y 'TestReporter'</h1>
+<p>"TestInfo" y "TestReporter" son interfaces proporcionadas por JUnit 5 para obtener información sobre las pruebas que se están ejecutando y para reportar información adicional durante la ejecución de las pruebas.</p>
+
+`TestInfo`:
+-  `String getDisplayName()`: Devuelve el nombre descriptivo de la prueba.
+-  `Set<Tag> getTags()`: Devuelve las etiquetas asociadas a la prueba, si se han especificado usando `@Tag`.
+-  `Optional<Class<?>> getTestClass()`: Devuelve la clase de prueba asociada a la prueba.
+-  `Optional<Method> getTestMethod()`: Devuelve el método de prueba asociado a la prueba.
+-  `Map<String, String> getTestAttributes()`: Devuelve los atributos adicionales asociados a la prueba.
+  
+`TestReporter`:
+-  `void publishEntry(String key, String value)`: Publica una entrada en el reporte de la prueba con la clave y el valor especificados.
+-  `void publishEntry(Map<String, String> entries)`: Publica varias entradas en el reporte de la prueba con los pares de clave-valor especificados en el mapa.
+-  `void publishEntry(ReportEntry entry)`: Publica una entrada de reporte personalizada.
+-  `void publishEntry(String message)`: Publica un mensaje en el reporte de la prueba.
+
+<p>Estas interfaces son útiles para proporcionar información adicional o personalizada sobre las pruebas durante su ejecución, lo que puede ser útil para fines de registro, seguimiento o diagnóstico de problemas.</p>
